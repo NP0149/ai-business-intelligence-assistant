@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Business Intelligence Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>📊 AI Business Intelligence</h1>
+            <p>Ask questions about your sales data using natural language.</p>
+        </header>
+
+        <main>
+            <section class="question-box">
+                <h2>Ask your business question</h2>
+
+                <textarea id="question"
+                    placeholder="Example: Which product generated the highest revenue?"></textarea>
+
+                <button id="askBtn" onclick="askQuestion()">Ask AI</button>
+
+                <div class="suggestions">
+                    <button onclick="setQuestion('What is the total revenue?')">Total Revenue</button>
+                    <button onclick="setQuestion('Which product generated the highest revenue?')">Top Product</button>
+                    <button onclick="setQuestion('Show monthly revenue trend')">Monthly Trend</button>
+                    <button onclick="setQuestion('Which region generated the highest revenue?')">Top Region</button>
+                </div>
+            </section>
+
+            <section id="result" class="result-box">
+                <h2>Analysis Result</h2>
+                <p>Your answer will appear here.</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>AI-Powered Business Intelligence Assistant | SQLite + Node.js + Gemini</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
